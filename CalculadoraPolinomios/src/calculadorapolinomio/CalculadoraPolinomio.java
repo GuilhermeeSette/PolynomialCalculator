@@ -17,10 +17,25 @@ public class CalculadoraPolinomio {
         this.Polinomio_2 = Polinomio_2;
     }
 
+    //Inverte vetor
+    public static int[] inverterVetor(int vet[]) {
+        int temp;
+        for (int i = 0; i < vet.length; i++) {
+            for (int j = 0; j < i; j++) {
+                temp = vet[i];
+                vet[i] = vet[j];
+                vet[j] = temp;
+            }
+        }
+        return vet;
+    }
+
     public static void main(String[] args) {
         Polinomio polinomio_1;
         Polinomio polinomio_2;
         CalculadoraPolinomio calculadora;
+
+        
     }
 }
 

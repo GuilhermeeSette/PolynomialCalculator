@@ -7,8 +7,16 @@ public class Polinomio {
     // recebe um grau de polinômio e instancia os termos do
     // polinômio
     public Polinomio(int grau){
-
+        this.grau = grau;
     }
+
+    public Polinomio preenche_termos(double[] termos){
+        for (int i =0; i < this.grau + 1; i++){
+            this.termos[i] = (i == (this.grau - 1)) ?  0 : termos[i];
+        }
+    }
+
+
     // imprime o polinômio, será explica a seguir
     public void mostra(){
 
