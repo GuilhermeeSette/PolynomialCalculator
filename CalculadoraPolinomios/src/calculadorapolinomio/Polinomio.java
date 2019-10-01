@@ -27,18 +27,19 @@ public class Polinomio {
     return resultado;
     }
 
-    public double[] soma(Polinomio p1, Polinomio p2){
+    public double[] soma(Polinomio p2){
+        
         double[] soma;
-        int maiorGrau = Math.max(p1.grau, p2.grau);
+        int maiorGrau = Math.max(this.grau, p2.grau);
         soma = new double[maiorGrau];
         for (int i = 0; i < maiorGrau; i++){
-            if (i <= p1.grau && i <= p2.grau){
-                soma[i] = p1.termos[i] + p2.termos[i];//aqui a soma da certo e acontece
+            if (i <= this.grau && i <= p2.grau){
+                soma[i] = this.termos[i] + p2.termos[i];//aqui a soma da certo e acontece
             } else {
-                if (i > p1.grau) {
+                if (i > this.grau) {
                     soma[i] = p2.termos[i];
                 } else {
-                    soma[i] = p1.termos[i];
+                    soma[i] = this.termos[i];
                 }
             }
         }

@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b56cbb5-be74-4f88-a811-553a7b85251e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CalculadoraPolinomios/calculadorapolinomio/CalculadoraPolinomio.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CalculadoraPolinomios/calculadorapolinomio/CalculadoraPolinomio.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CalculadoraPolinomios/calculadorapolinomio/Polinomio.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CalculadoraPolinomios/calculadorapolinomio/Polinomio.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/calculadorapolinomio/Polinomio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/calculadorapolinomio/Polinomio.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
