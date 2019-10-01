@@ -27,6 +27,27 @@ public class Polinomio {
     return resultado;
     }
 
+    public double[] soma(Polinomio p2){
+        
+        double[] soma;
+        int maiorGrau = Math.max(this.grau, p2.grau);
+        soma = new double[maiorGrau];
+        for (int i = 0; i < maiorGrau; i++){
+            if (i <= this.grau && i <= p2.grau){
+                soma[i] = this.termos[i] + p2.termos[i];//aqui a soma da certo e acontece
+            } else {
+                if (i > this.grau) {
+                    soma[i] = p2.termos[i];
+                } else {
+                    soma[i] = this.termos[i];
+                }
+            }
+        }
+
+
+        return soma;
+    }
+
     // imprime o polinômio, será explica a seguir
     public void mostra(){
     }
