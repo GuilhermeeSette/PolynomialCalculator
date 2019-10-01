@@ -1,5 +1,6 @@
 package calculadorapolinomio;
 import java.util.Scanner;
+import java.lang.Math;
 
 
 /**
@@ -19,30 +20,25 @@ public class CalculadoraPolinomio {
         this.Polinomio_2 = Polinomio_2;
     }
 
-    //Inverte vetor
-    private static double[] inverterVetor(double vet[]) {
-        double temp;
-        for (int i = 0; i < vet.length; i++) {
-            for (int j = 0; j < i; j++) {
-                temp = vet[i];
-                vet[i] = vet[j];
-                vet[j] = temp;
-            }
-        }
-        return vet;
-    }
 
     public static double[] preenche_vetor(int grau){
+        int grau_atual = grau;
         double[] vetor = new double[grau + 1];
         Scanner input = new Scanner(System.in);
         for (int i =0; i < grau + 1; i++) {
-            if (i == (grau - 1)) {
-                vetor[i] = 0;
-            } else {
+            if (grau_atual == (grau - 1)) {
+                vetor[grau_atual] = 0;
+                grau_atual -= 1;
+            }else{
                 System.out.print("Digite o valor\n");
-                vetor[i] = input.nextInt();
+                vetor[grau_atual] = input.nextInt();
+                grau_atual -= 1;
             }
         }
+        for (int i =0; i < grau + 1; i++) {
+            System.out.print(vetor[i]);
+        }
+
         return vetor;
     }
 
@@ -77,20 +73,18 @@ public class CalculadoraPolinomio {
                     double[] vetor_termos_2;
                     System.out.print("Digite o grau do polinômio 1: ");
                     grau_polinomio_1 = input.nextInt();
-                    polinomio_1 = new Polinomio(grau_polinomio_1);
                     vetor_termos_1 = new double[grau_polinomio_1];
-                    //Preencher polinomio
                     vetor_termos_1 = preenche_vetor(grau_polinomio_1);
-                    polinomio_1.preenche_termos(inverterVetor(vetor_termos_1));
+                    //Preencher polinomio
+                    polinomio_1 = new Polinomio(grau_polinomio_1, vetor_termos_1);
                     System.out.print("\nPolinômio 1 criado com sucesso!");
 
                     System.out.print("\nDigite o grau do polinômio 2: ");
                     grau_polinomio_2 = input.nextInt();
-                    polinomio_2 = new Polinomio(grau_polinomio_2);
                     vetor_termos_2 = new double[grau_polinomio_2];
-                    //Preencher polinomio
                     vetor_termos_2 = preenche_vetor(grau_polinomio_2);
-                    polinomio_2.preenche_termos(inverterVetor(vetor_termos_2));
+                    //Preencher polinomio
+                    polinomio_2 = new Polinomio(grau_polinomio_2, vetor_termos_2);
                     System.out.print("\nPolinômio 2 criado com sucesso!");
                     break;
 
@@ -101,7 +95,7 @@ public class CalculadoraPolinomio {
                 case 3:
                     System.out.println("Implementar Multiplicação");
                     break;
-
+                    
                 case 0:
                     System.out.println("Exiting Program...");
                     System.exit(0);
