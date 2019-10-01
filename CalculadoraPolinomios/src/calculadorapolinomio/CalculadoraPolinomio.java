@@ -21,6 +21,75 @@ public class CalculadoraPolinomio {
     }
 
 
+    public static void main(String[] args) {
+        //Definicao das variaveis
+        Polinomio polinomio_1;
+        Polinomio polinomio_2;
+        CalculadoraPolinomio calculadora;
+        int grau_polinomio_1, grau_polinomio_2;
+        double[] vetor_termos_1, vetor_termos_2;
+        Scanner input = new Scanner(System.in);
+        boolean mainLoop = true;
+        int escolha;
+
+        //Criacao dos polinomios
+        System.out.print("--------------------------------------------\n");
+        System.out.print("|");
+        System.out.print("                                          |\n");
+        System.out.print("|        CALCULADORA DE POLINOMIOS         |\n");
+        System.out.print("|");
+        System.out.print("                                          |\n");
+        System.out.print("--------------------------------------------\n");
+        System.out.print("\n");
+        System.out.print("Bem-vindo!\n");
+        System.out.print("Para iniciar os calculos, é necessário criar 2 polinomios.\n");
+        System.out.print("Vamos la:\n");
+        System.out.print("Digite o grau do polinômio 1: ");
+        grau_polinomio_1 = input.nextInt();
+        vetor_termos_1 = new double[grau_polinomio_1];
+        vetor_termos_1 = preenche_vetor(grau_polinomio_1);
+        //Preencher polinomio
+        polinomio_1 = new Polinomio(grau_polinomio_1, vetor_termos_1);
+        System.out.print("Polinômio 1 criado com sucesso!\n");
+
+        System.out.print("Digite o grau do polinômio 2: \n");
+        grau_polinomio_2 = input.nextInt();
+        vetor_termos_2 = new double[grau_polinomio_2];
+        vetor_termos_2 = preenche_vetor(grau_polinomio_2);
+        //Preencher polinomio
+        polinomio_2 = new Polinomio(grau_polinomio_2, vetor_termos_2);
+        System.out.print("\nPolinômio 2 criado com sucesso!");
+
+        while(true){
+            System.out.println("----------------------\n");
+            System.out.println("Menu - Calculadora\n");
+            System.out.print("1.) Somar\n");
+            System.out.print("2.) Multiplicar\n");
+            System.out.print("0.) Sair\n");
+            System.out.print("\nDigite sua opção: ");
+            System.out.println("----------------------\n");
+
+            escolha = input.nextInt();
+
+            switch(escolha){
+                case 1:
+                    System.out.println("Implementar Soma");
+                    break;
+
+                case 2:
+                    System.out.println("Implementar Multiplicacao");
+                    break;
+                case 0:
+                    System.out.println("Ate mais...");
+                    System.exit(0);
+                    break;
+                default :
+                    System.out.println("Opcao invalida! Tente novamente.");
+                    break;
+            }
+        }
+    }
+
     public static double[] preenche_vetor(int grau){
         int grau_atual = grau;
         double[] vetor = new double[grau + 1];
@@ -35,76 +104,6 @@ public class CalculadoraPolinomio {
                 grau_atual -= 1;
             }
         }
-        for (int i =0; i < grau + 1; i++) {
-            System.out.print(vetor[i]);
-        }
-
         return vetor;
-    }
-
-    public static void main(String[] args) {
-        Polinomio polinomio_1;
-        Polinomio polinomio_2;
-        CalculadoraPolinomio calculadora;
-
-        //Menu
-        Scanner input = new Scanner(System.in);
-        boolean mainLoop = true;
-
-        int escolha;
-        while(true){
-            System.out.println("----------------------\n");
-            System.out.println("Menu - Calculadora\n");
-            System.out.print("1.) Criar Polinômio \n");
-            System.out.print("2.) Somar\n");
-            System.out.print("3.) Multiplicar\n");
-            System.out.print("0.) Exit\n");
-            System.out.print("\nDigite sua opção: ");
-            System.out.println("----------------------\n");
-
-            escolha = input.nextInt();
-
-            switch(escolha){
-
-                case 1:
-                    //Criando polinomio
-                    int grau_polinomio_1, grau_polinomio_2;
-                    double[] vetor_termos_1;
-                    double[] vetor_termos_2;
-                    System.out.print("Digite o grau do polinômio 1: ");
-                    grau_polinomio_1 = input.nextInt();
-                    vetor_termos_1 = new double[grau_polinomio_1];
-                    vetor_termos_1 = preenche_vetor(grau_polinomio_1);
-                    //Preencher polinomio
-                    polinomio_1 = new Polinomio(grau_polinomio_1, vetor_termos_1);
-                    System.out.print("\nPolinômio 1 criado com sucesso!");
-
-                    System.out.print("\nDigite o grau do polinômio 2: ");
-                    grau_polinomio_2 = input.nextInt();
-                    vetor_termos_2 = new double[grau_polinomio_2];
-                    vetor_termos_2 = preenche_vetor(grau_polinomio_2);
-                    //Preencher polinomio
-                    polinomio_2 = new Polinomio(grau_polinomio_2, vetor_termos_2);
-                    System.out.print("\nPolinômio 2 criado com sucesso!");
-                    break;
-
-                case 2:
-                    System.out.println("Implementar Soma");
-                    break;
-
-                case 3:
-                    System.out.println("Implementar Multiplicação");
-                    break;
-                    
-                case 0:
-                    System.out.println("Exiting Program...");
-                    System.exit(0);
-                    break;
-
-                default :
-                    System.out.println("This is not a valid Menu Option! Please Select Another");
-                    break;
-            }
-        }
     }
 }
