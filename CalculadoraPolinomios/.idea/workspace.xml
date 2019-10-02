@@ -1,19 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AnalysisUIOptions">
-    <option name="SCOPE_TYPE" value="3" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b56cbb5-be74-4f88-a811-553a7b85251e" name="Default Changelist" comment="">
-<<<<<<< Updated upstream
-      <change beforePath="$PROJECT_DIR$/src/calculadorapolinomio/Polinomio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/calculadorapolinomio/Polinomio.java" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="7d4212d2-fa50-4a3a-81b8-288a2956e8e9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CalculadoraPolinomios/calculadorapolinomio/CalculadoraPolinomio.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CalculadoraPolinomios/calculadorapolinomio/CalculadoraPolinomio.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CalculadoraPolinomios/calculadorapolinomio/Polinomio.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CalculadoraPolinomios/calculadorapolinomio/Polinomio.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/calculadorapolinomio/CalculadoraPolinomio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/calculadorapolinomio/CalculadoraPolinomio.java" afterDir="false" />
->>>>>>> Stashed changes
+      <change beforePath="$PROJECT_DIR$/src/calculadorapolinomio/Polinomio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/calculadorapolinomio/Polinomio.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,30 +12,10 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="1RYsuCk5oeiW2ueAicdNJIoXq8O" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="calculadorapolinomio" />
-    </key>
-  </component>
+  <component name="ProjectId" id="1RcxRpVrLNPgO1hwETdmhZYawMK" />
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -58,7 +29,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="test" type="Application" factoryName="Application">
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="calculadorapolinomio.CalculadoraPolinomio" />
       <module name="CalculadoraPolinomios" />
       <method v="2">
@@ -71,11 +42,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2b56cbb5-be74-4f88-a811-553a7b85251e" name="Default Changelist" comment="" />
-      <created>1569855583309</created>
+      <changelist id="7d4212d2-fa50-4a3a-81b8-288a2956e8e9" name="Default Changelist" comment="" />
+      <created>1569980180453</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1569855583309</updated>
+      <updated>1569980180453</updated>
     </task>
     <servers />
   </component>
@@ -84,9 +55,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
