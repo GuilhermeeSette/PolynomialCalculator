@@ -30,10 +30,9 @@ public class CalculadoraPolinomio {
         CalculadoraPolinomio calculadora;
         int grau_polinomio_1, grau_polinomio_2;
         double[] vetor_termos_1, vetor_termos_2;
-        Scanner input = new Scanner(System.in);
+        Scanner input    = new Scanner(System.in);
         boolean mainLoop = true;
-        int escolha;
-        int continua;
+        int escolha, continua, esolha_calcula, valor_calcula;
 
         //Criacao dos polinomios
         System.out.print("--------------------------------------------\n");
@@ -69,6 +68,7 @@ public class CalculadoraPolinomio {
             System.out.println("Menu - Calculadora\n");
             System.out.print("1.) Somar\n");
             System.out.print("2.) Multiplicar\n");
+            System.out.print("3.) Calcular valor de um polinomio\n");
             System.out.print("0.) Sair\n");
             System.out.print("\nDigite sua opção: ");
             System.out.println("----------------------\n");
@@ -88,6 +88,31 @@ public class CalculadoraPolinomio {
                     System.out.println("Digite um número para continuar");
                     continua = input.nextInt();
                     break;
+                case 3:
+                    System.out.println("Escolha o polinomio a ser calculado:");
+                    System.out.print("  1.) ");
+                    polinomio_1.mostra();
+                    System.out.print("  2.) ");
+                    polinomio_2.mostra();
+                    esolha_calcula = input.nextInt();
+                    if(esolha_calcula == 1) {
+                        System.out.println("Digite o valor de x: ");
+                        valor_calcula = input.nextInt();
+                        System.out.println(polinomio_1.calcula(valor_calcula));
+                        System.out.println("Digite um número para continuar");
+                        continua = input.nextInt();
+                        break;
+                    }else if(esolha_calcula == 2){
+                        System.out.println("Digite o valor de x: ");
+                        valor_calcula = input.nextInt();
+                        System.out.println(polinomio_2.calcula(valor_calcula));
+                        System.out.println("Digite um número para continuar");
+                        continua = input.nextInt();
+                        break;
+                    }else{
+                        System.out.println("Opcao invalida! Tente novamente.");
+                        break;
+                    }
                 case 0:
                     System.out.println("Ate mais...");
                     System.exit(0);

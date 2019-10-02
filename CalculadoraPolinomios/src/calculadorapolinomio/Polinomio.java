@@ -1,23 +1,19 @@
 package calculadorapolinomio;
 
 public class Polinomio {
-    // vetor para representar os termos do polinomio
+
     private double[] termos;
     private int grau;
-    // recebe um grau de polinômio e instancia os termos do
-    // polinômio
+
     public Polinomio(int grau, double[] termos){
         this.grau = grau;
         this.termos = termos;
     }
 
-//this.termos é o vetor
-    //this.termos[i] elevado a i
-    //resultado += em um for
-    public double calcula(){
+    public double calcula(int valor){
         double resultado = this.termos[0];
         for (int i = 1; i < this.grau + 1; i++){
-            resultado += Math.pow(this.termos[i],i);
+            resultado += Math.pow(this.termos[i] * valor,i);
         }
     return resultado;
     }
