@@ -38,8 +38,6 @@ public class Polinomio {
                 }
             }
         }
-
-
         return soma;
     }
 
@@ -64,10 +62,11 @@ public class Polinomio {
                 if(i == 0){
                     polinomio += this.termos[i];
                 }
-                else if(this.termos[i] > 0){
+                else if(this.termos[i-1] < 0){
+                    polinomio += this.termos[i] + "X^" + i + " ";
+                }
+                else if(this.termos[i-1] > 0){
                     polinomio += this.termos[i] + "X^" + i + " + ";
-                }else if(this.termos[i] < 0){
-                    polinomio += this.termos[i] + "X^" + i;
                 }
             }
         }
