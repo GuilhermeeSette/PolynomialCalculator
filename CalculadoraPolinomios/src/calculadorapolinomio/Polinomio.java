@@ -22,12 +22,11 @@ public class Polinomio {
     return resultado;
     }
 
-    public double[] soma(Polinomio p2){
-        
+    public Polinomio soma(Polinomio p2){
         double[] soma;
         int maiorGrau = Math.max(this.grau, p2.grau);
-        soma = new double[maiorGrau];
-        for (int i = 0; i < maiorGrau; i++){
+        soma = new double[maiorGrau + 1];
+        for (int i = 0; i < maiorGrau + 1; i++){
             if (i <= this.grau && i <= p2.grau){
                 soma[i] = this.termos[i] + p2.termos[i];//aqui a soma da certo e acontece
             } else {
@@ -38,7 +37,7 @@ public class Polinomio {
                 }
             }
         }
-        return soma;
+        return new Polinomio(maiorGrau, soma);
     }
 
     public Polinomio multiplica(Polinomio p2){
@@ -59,14 +58,21 @@ public class Polinomio {
         String polinomio = "";
         for(int i = this.grau; i >=0; i--){
             if (this.termos[i] != 0) {
-                if(i == 0){
-                    polinomio += this.termos[i];
+                if(i == this.grau){
+                    polinomio += this.termos[i] + "X^" + i;
                 }
-                else if(this.termos[i-1] < 0){
-                    polinomio += this.termos[i] + "X^" + i + " ";
+                else if(i == 0){
+                    if(this.termos[i] > 0){
+                        polinomio += " + " +this.termos[i];
+                    }else{
+                        polinomio += " " +this.termos[i];
+                    }
                 }
-                else if(this.termos[i-1] > 0){
-                    polinomio += this.termos[i] + "X^" + i + " + ";
+                else if(this.termos[i] < 0){
+                    polinomio += " " + this.termos[i] + "X^" + i;
+                }
+                else if(this.termos[i] > 0){
+                    polinomio += " + " + this.termos[i] + "X^" + i;
                 }
             }
         }
