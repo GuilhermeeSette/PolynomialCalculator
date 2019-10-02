@@ -25,6 +25,8 @@ public class CalculadoraPolinomio {
         //Definicao das variaveis
         Polinomio polinomio_1;
         Polinomio polinomio_2;
+        Polinomio polinomio_soma;
+        Polinomio polinomio_mult;
         CalculadoraPolinomio calculadora;
         int grau_polinomio_1, grau_polinomio_2;
         double[] vetor_termos_1, vetor_termos_2;
@@ -44,6 +46,7 @@ public class CalculadoraPolinomio {
         System.out.print("Bem-vindo!\n");
         System.out.print("Para iniciar os calculos, é necessário criar 2 polinomios.\n");
         System.out.print("Vamos la:\n");
+
         System.out.print("Digite o grau do polinômio 1: ");
         grau_polinomio_1 = input.nextInt();
         vetor_termos_1 = new double[grau_polinomio_1];
@@ -73,11 +76,12 @@ public class CalculadoraPolinomio {
 
             switch(escolha){
                 case 1:
-                    System.out.println("Implementar Soma");
+                    polinomio_soma = polinomio_1.soma(polinomio_2);
+                    polinomio_soma.mostra();
                     break;
-
                 case 2:
-                    System.out.println("Implementar Multiplicacao");
+                    polinomio_mult = polinomio_1.multiplica(polinomio_2);
+                    polinomio_mult.mostra();
                     break;
                 case 0:
                     System.out.println("Ate mais...");

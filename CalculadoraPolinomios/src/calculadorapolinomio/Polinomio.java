@@ -11,11 +11,6 @@ public class Polinomio {
         this.termos = termos;
     }
 
-    public void preenche_termos(double[] termos){
-        for (int i =0; i < this.grau + 1; i++){
-            this.termos[i] = (i == (this.grau - 1)) ?  0 : termos[i];
-        }
-    }
 //this.termos é o vetor
     //this.termos[i] elevado a i
     //resultado += em um for
@@ -48,9 +43,35 @@ public class Polinomio {
         return soma;
     }
 
+    public Polinomio multiplica(Polinomio p2){
+        double[] termos_resultante;
+        int grau_resultante = this.grau + p2.grau;
+        termos_resultante = new double[grau_resultante + 1];
+
+        for (int i = this.grau; i >= 0; i--){
+            for(int j = p2.grau; j >= 0; j--){
+                termos_resultante[i + j] += this.termos[i] * p2.termos[j];
+            }
+        }
+        return new Polinomio(grau_resultante, termos_resultante);
+    }
+
     // imprime o polinômio, será explica a seguir
     public void mostra(){
+        String polinomio = "";
+        for(int i = this.grau; i >=0; i--){
+            if (this.termos[i] != 0) {
+                if(i == 0){
+                    polinomio += this.termos[i];
+                }
+                else if(this.termos[i] > 0){
+                    polinomio += this.termos[i] + "X^" + i + " + ";
+                }else if(this.termos[i] < 0){
+                    polinomio += this.termos[i] + "X^" + i;
+                }
+            }
+        }
+        System.out.println(polinomio + "\n");
     }
 }
 
-//x3 -5x + 2
